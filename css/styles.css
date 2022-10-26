@@ -1,6 +1,6 @@
 :root {
   --main-title-color: #ffffff;
-  --main-btn-color: #ffffff;
+  --main-btn-bg-color: #ffffff;
   --secondary-title-color: #303030;
   --secondary-btn-color: #303030;
   --accent-color: #ff6c00;
@@ -8,27 +8,63 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
-.list {
-  list-style: none;
+
+/*---- reset start---- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 .link {
   text-decoration: none;
+  color: currentColor;
 }
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+/*---- reset end---- */
+
 .btn {
+  padding: 11px 19px;
+
   font-family: 'Open Sans';
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  cursor: pointer;
+  color: var(--secondary-btn-color);
+
   background-color: transparent;
-  border: 1px solid var(--main-btn-color);
+  border: 1px solid var(--accent-color);
   border-radius: 25px;
+  cursor: pointer;
 }
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-color);
+  color: var(--main-btn-bg-color);
+}
+.btn-theme-dark {
+  color: var(--main-btn-bg-color);
+}
+.btn-theme-dark:hover,
+.btn-theme-dark:focus {
+  background-color: var(--accent-color);
+}
+
 /*------header----- */
 .header {
-  background-color: grey;
+  background-color: #191c26;
 }
 .nav-link {
   font-weight: 600;
@@ -56,18 +92,14 @@ body {
   color: var(--accent-color);
 }
 .header-btn {
-  color: var(--main-btn-color);
+  color: var(--main-btn-bg-color);
 }
-.header-btn:hover,
-.header-btn:focus,
-.header-btn:active {
-  border-color: #ff6c00;
-}
+
 /*------header----- */
 
 /* -----hero------ */
 .hero {
-  background-color: grey;
+  background-color: #191c26;
 }
 .hero-link {
   font-weight: 600;
@@ -104,7 +136,7 @@ body {
 }
 /* ------about--------- */
 .about {
-  background-color: grey;
+  background-color: var(--main-btn-bg-color);
 }
 .about-title {
   font-weight: 600;
@@ -134,11 +166,217 @@ body {
   letter-spacing: 0.02em;
   color: #555555;
 }
-.about-btn {
-  color: var(--secondary-btn-color);
+/* ------about--------- */
+
+/*----section-dekstop----*/
+.section-desktop {
+  background-color: #191c26;
 }
-.about-btn:hover,
-.about-btn:focus,
-.about-btn:active {
-  border-color: var(--accent-color);
+
+.desktop-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
 }
+.desktop-title {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+
+  color: var(--main-title-color);
+}
+.desktop-item-text {
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+
+  color: #9da4bd;
+}
+/*----section-dekstop----*/
+/*----section-me-----*/
+.text-number {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(57 / 42);
+  /* text-align: center; */
+  letter-spacing: 0.05em;
+  color: var(--secondary-title-color);
+}
+.sign {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  text-align: center;
+  vertical-align: super;
+
+  color: var(--accent-color);
+}
+.me-item-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  /* text-align: center; */
+
+  color: var(--secondary-title-color);
+}
+.me-subtext {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+  color: var(--secondary-title-color);
+}
+.me-title {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+  color: var(--secondary-title-color);
+}
+.me-description {
+  font-size: 18px;
+  line-height: calc (30 / 18);
+  letter-spacing: 0.02em;
+
+  color: #555555;
+}
+
+/*----section-barbers-----*/
+.barbers-description {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+  color: var(--secondary-title-color);
+}
+.barbers-title {
+  font-family: 'Raleway';
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+
+  color: var(--secondary-title-color);
+}
+.barbers-subtitle {
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  /* text-align: center; */
+  letter-spacing: 0.02em;
+
+  color: var(--secondary-title-color);
+}
+.barbers-subtext {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  /* text-align: center; */
+  letter-spacing: 0.02em;
+
+  color: var(--accent-color);
+}
+
+/*----section-portfolio-----*/
+.portfolio-title {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.portfolio-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+  color: var(--secondary-title-color);
+}
+
+/*----section-portfolio-----*/
+
+/*----onl-booking---- */
+.onl-booking {
+  background: #191c26;
+}
+.onl-booking-title {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+  color: var(--main-title-color);
+}
+.onl-booking-btn {
+  padding: 11px 61px;
+}
+/*----onl-booking---- */
+
+/* ----contacts section---- */
+.contacts {
+  background: #191c26;
+  outline: 2px solid white;
+}
+.contacts-title {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+.address-link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+.tel-link {
+  font-style: normal;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.mailto-link {
+  font-style: normal;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
+
+  color: #9da4bd;
+}
+/* ----contacts section---- */
+
+/* ----footer---- */
+.footer {
+  background: #191c26;
+  outline: 2px solid white;
+}
+.footer-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+  color: var(--main-title-color);
+}
+
+.footer-link {
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+/* ----footer---- */
