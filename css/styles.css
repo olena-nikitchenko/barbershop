@@ -73,10 +73,21 @@ img {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  outline: 2px solid tomato;
 }
-.upertitle {
+.uppertitle {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
+}
+.uppertitle::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+  background-color: #303030;
+}
+.uppertitle-theme-dark::before {
+  background-color: rgba(157, 164, 189, 0.6);
 }
 .main-title {
   margin-bottom: 20px;
@@ -240,7 +251,13 @@ img {
 
 /*----section-dekstop----*/
 .section-desktop {
+  max-width: 1600px;
+  margin: 0 auto;
   background-color: #191c26;
+  background-image: url(../images/desktop-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .desktop-block {
   display: flex;
@@ -268,7 +285,6 @@ img {
   flex-basis: 570px;
 
   padding: 30px 20px;
-  outline: 1px solid green;
 }
 .desktop-item:not(:last-child) {
   margin-bottom: 20px;
@@ -285,13 +301,17 @@ img {
 
   color: #9da4bd;
 }
-.line {
+.desktop-item::before {
+  content: '';
   display: block;
   height: 1px;
   flex-grow: 1;
   margin-left: 12px;
   margin-right: 12px;
   background-color: rgba(157, 164, 189, 0.12);
+}
+.service-text {
+  order: -1;
 }
 .desktop-btn {
   display: block;
@@ -413,8 +433,22 @@ img {
 /*----section-portfolio-----*/
 
 /*----onl-booking---- */
-.onl-booking {
-  background: #191c26;
+.contacts-group {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #191c26;
+  background-image: url(../images/booking-bg.png);
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 423px) top 50%;
+}
+.contacts-container {
+  display: flex;
+  justify-content: space-between;
+}
+.onl-booking,
+.contacts {
+  width: 570px;
+  padding-top: 130px;
 }
 .onl-booking-title {
   font-family: 'Raleway';
@@ -431,9 +465,9 @@ img {
 
 /* ----contacts section---- */
 .contacts {
-  padding-top: 130px;
-  background: #191c26;
+  padding-left: 100px;
 }
+
 .contacts-title {
   margin-bottom: 40px;
   font-family: 'Raleway';
