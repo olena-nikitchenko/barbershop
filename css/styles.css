@@ -4,6 +4,10 @@
   --secondary-title-color: #303030;
   --secondary-btn-color: #303030;
   --accent-color: #ff6c00;
+
+  /*---Object----*/
+  --indent: 30px;
+  --items: 3;
 }
 body {
   font-family: 'Open Sans', sans-serif;
@@ -66,7 +70,7 @@ img {
 .container {
   width: 1200px;
   padding-right: 15px;
-  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
   outline: 2px solid tomato;
@@ -77,6 +81,16 @@ img {
 .main-title {
   margin-bottom: 20px;
 }
+/* ---*Card set */
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+/* ---*Card set */
 
 /*------header----- */
 .header {
@@ -228,7 +242,11 @@ img {
 .section-desktop {
   background-color: #191c26;
 }
-
+.desktop-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
 .desktop-text {
   font-weight: 600;
   font-size: 11px;
@@ -246,12 +264,38 @@ img {
 
   color: var(--main-title-color);
 }
+.desktop-list {
+  flex-basis: 570px;
+
+  padding: 30px 20px;
+  outline: 1px solid green;
+}
+.desktop-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.desktop-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 .desktop-item-text {
   font-size: 18px;
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
 
   color: #9da4bd;
+}
+.line {
+  display: block;
+  height: 1px;
+  flex-grow: 1;
+  margin-left: 12px;
+  margin-right: 12px;
+  background-color: rgba(157, 164, 189, 0.12);
+}
+.desktop-btn {
+  display: block;
+  margin: 0 auto;
 }
 /*----section-dekstop----*/
 /*----section-me-----*/
@@ -320,14 +364,16 @@ img {
 
   color: var(--secondary-title-color);
 }
+
 .barbers-box {
   padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 .barbers-subtitle {
   margin-bottom: 8px;
   font-size: 18px;
   line-height: calc(25 / 18);
-  /* text-align: center; */
   letter-spacing: 0.02em;
 
   color: var(--secondary-title-color);
@@ -335,7 +381,6 @@ img {
 .barbers-subtext {
   font-size: 14px;
   line-height: calc(19 / 14);
-  /* text-align: center; */
   letter-spacing: 0.02em;
 
   color: var(--accent-color);
@@ -362,7 +407,9 @@ img {
   text-transform: uppercase;
   color: var(--secondary-title-color);
 }
-
+.portfolio-list {
+  --items: 4;
+}
 /*----section-portfolio-----*/
 
 /*----onl-booking---- */
