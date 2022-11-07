@@ -264,6 +264,16 @@ img {
   justify-content: space-between;
   margin-bottom: 44px;
 }
+.desktop-list {
+  flex-basis: 570px;
+  padding: 30px 20px;
+}
+.desktop-list:first-child {
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+.desktop-list:last-child {
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
 .desktop-text {
   font-weight: 600;
   font-size: 11px;
@@ -280,11 +290,6 @@ img {
   letter-spacing: 0.05em;
 
   color: var(--main-title-color);
-}
-.desktop-list {
-  flex-basis: 570px;
-
-  padding: 30px 20px;
 }
 .desktop-item:not(:last-child) {
   margin-bottom: 20px;
