@@ -561,8 +561,9 @@ kf .header-nav {
   align-items: center;
   gap: 16px;
 }
-.address-link {
-  align-items: flex-start;
+.address-link > svg {
+  align-self: baseline;
+  margin-top: 6px;
 }
 /* ----contacts section---- */
 
