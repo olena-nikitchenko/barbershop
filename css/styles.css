@@ -114,6 +114,10 @@ img {
   z-index: var(--header-idx);
   width: 100%;
 }
+.header.no-transparency {
+  background-color: rgba(25, 28, 38, 0.7);
+  backdrop-filter: blur(3px);
+}
 .header-container {
   display: flex;
   align-items: center;
@@ -124,6 +128,10 @@ img {
 .header-logo {
   fill: #303030;
 }
+.header.no-transparency .header-logo {
+  fill: #ffffff;
+}
+
 .header-nav {
   margin-right: auto;
 }
@@ -255,8 +263,36 @@ img {
 }
 .slider-list {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 20px;
+  bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.slider-btn {
+  width: 60px;
+  height: 24px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  color: var(--main-title-color);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+}
+.slider-btn.prev {
+  text-align: left;
+}
+.slider-btn.next {
+  text-align: right;
+}
+.slider-btn[disabled] {
+  color: rgba(157, 164, 189, 0.6);
+  border-color: rgba(157, 164, 189, 0.6);
 }
 
 /* ------about--------- */
@@ -381,20 +417,55 @@ img {
 }
 /*----section-dekstop----*/
 /*----section-me-----*/
+.me-container {
+  display: flex;
+  gap: 30px;
+}
+.me-left-side {
+  width: 50%;
+}
+.me-right-side {
+  width: 500px;
+}
+.me-list {
+  display: flex;
+  width: 370px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.me-item {
+  width: 170px;
+  min-height: 133px;
+  padding: 20px;
+  text-align: center;
+
+  background-color: #f7f7f7;
+}
+.me-item:nth-child(2n) {
+  margin-top: 30px;
+  margin-left: 30px;
+}
 .text-number {
+  position: relative;
+  display: inline-block;
   font-weight: 700;
   font-size: 42px;
   line-height: calc(57 / 42);
-  /* text-align: center; */
   letter-spacing: 0.05em;
   color: var(--secondary-title-color);
 }
-.sign {
+
+.text-number::after {
+  content: '+';
+  position: absolute;
+  top: 0;
+  right: -15px;
+
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
   text-align: center;
-  vertical-align: super;
 
   color: var(--accent-color);
 }

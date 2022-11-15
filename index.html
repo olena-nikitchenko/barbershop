@@ -20,7 +20,7 @@
   </head>
   <body>
     <!--header  -->
-    <header class="header">
+    <header class="header" data-header>
       <div class="header-container container">
         <a class="header-link" href="./index.html">
           <svg class="header-logo" width="69" height="56">
@@ -80,12 +80,11 @@
               <li class="slider-pogination-item"></li>
             </ul>
             <ul class="slider-list list">
-              list
               <li class="slider-item">
-                <button class="slider-btn" type="button">Back</button>
+                <button class="slider-btn prev" disabled type="button">Back</button>
               </li>
               <li class="slider-item">
-                <button class="slider-btn" type="button">Forward</button>
+                <button class="slider-btn next" type="button">Forward</button>
               </li>
             </ul>
           </div>
@@ -166,31 +165,35 @@
       </section>
       <!-- section-me -->
       <section class="me section">
-        <div class="container">
-          <ul class="me-list list">
-            <li class="me-item">
-              <span class="text-number">600<sup class="sign">+</sup></span>
-              <p class="me-item-text">Satisfied customers per day</p>
-            </li>
-            <li>
-              <span class="text-number">50<sup class="sign">+</sup></span>
-              <p class="me-item-text" class="me-item-text">Awards for excellent service</p>
-            </li>
-            <li>
-              <span class="text-number">20<sup class="sign">+</sup></span>
-              <p class="me-item-text">Kyiv’s best barbers</p>
-            </li>
-            <li>
-              <span class="text-number">100<sup class="sign">+</sup></span>
-              <p class="me-item-text">Gifts for regular customers</p>
-            </li>
-          </ul>
-          <p class="me-subtext uppertitle">Old traditional school</p>
-          <h2 class="me-title main-title">¿Why people come to us?</h2>
-          <p class="me-description">
-            Only good things are said about us. But it's better to see and feel 1 time than read 10
-            times.
-          </p>
+        <div class="me-container container">
+          <div class="me-left-side">
+            <ul class="me-list list">
+              <li class="me-item">
+                <span class="text-number">600</span>
+                <p class="me-item-text">Satisfied customers per day</p>
+              </li>
+              <li class="me-item">
+                <span class="text-number">50</span>
+                <p class="me-item-text" class="me-item-text">Awards for excellent service</p>
+              </li>
+              <li class="me-item">
+                <span class="text-number">20</span>
+                <p class="me-item-text">Kyiv’s best barbers</p>
+              </li>
+              <li class="me-item">
+                <span class="text-number">100</span>
+                <p class="me-item-text">Gifts for regular customers</p>
+              </li>
+            </ul>
+          </div>
+          <div class="me-right-side">
+            <p class="me-subtext uppertitle">Old traditional school</p>
+            <h2 class="me-title main-title">¿Why people come to us?</h2>
+            <p class="me-description">
+              Only good things are said about us. But it's better to see and feel 1 time than read
+              10 times.
+            </p>
+          </div>
         </div>
       </section>
       <!-- section-barbers -->
@@ -411,7 +414,18 @@
         <div class="container contacts-container">
           <section class="onl-booking section">
             <h2 class="onl-booking-title">Online-booking</h2>
-            <button class="btn-theme-dark onl-booking-btn btn" type="button">send</button>
+            <form class="bookung-form" name="booking_form">
+              <div class="booking-group">
+                <label>
+                  <input type="text" name="user_name" id="user_name" placeholder=" " />
+                  <span>NAME*</span>
+                   <label>
+                  <input type="tel" name="user_phone" id="user_phone" placeholder=" " />
+                  <span>PHONE*</span>
+                </label>
+              </div>
+              <button class="btn-theme-dark onl-booking-btn btn" type="submit">send</button>
+            </form>
           </section>
           <!-- contacts section -->
           <section class="contacts section">
@@ -476,5 +490,6 @@
         </ul>
       </div>
     </footer>
+    <script src="./js/header-scroll.js"></script>
   </body>
 </html>
