@@ -620,6 +620,18 @@ img {
 .onl-booking-btn {
   padding: 11px 61px;
 }
+
+/*----- Form----- */
+.booking-group {
+  display: block;
+}
+.booking-message {
+  display: block;
+  width: 400px;
+  min-height: 100px;
+  max-height: 300px;
+  resize: vertical;
+}
 /*----onl-booking---- */
 
 /* ----contacts section---- */

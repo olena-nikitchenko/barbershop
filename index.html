@@ -416,18 +416,32 @@
             <h2 class="onl-booking-title">Online-booking</h2>
             <form class="bookung-form" name="booking_form">
               <div class="booking-group">
-                <label>
-                  <input type="text" name="user_name" id="user_name" placeholder=" " />
-                  <span>NAME*</span>
-                   <label>
-                  <input type="tel" name="user_phone" id="user_phone" placeholder=" " />
-                  <span>PHONE*</span>
+                <label class="booking-group-field">
+                  <input
+                    class="booking-field"
+                    type="text"
+                    name="user_name"
+                    placeholder="Jhon Dou"
+                  />
+                  <span class="booking-label">NAME*</span>
+                </label>
+                <label class="booking-group-field">
+                  <input
+                    class="booking-field"
+                    type="tel"
+                    name="user_phone"
+                    placeholder="+38 (099) 123-45-67"
+                  />
+                  <span class="booking-label">PHONE*</span>
                 </label>
               </div>
-              <div>
-                <label for="" class="booking-label">Message</label>
-              <textarea name="" id=""  rows="5"></textarea>
-                </div>
+              <label class="booking-label">Message</label>
+              <textarea
+                class="booking-message"
+                name="user_message"
+                rows="5"
+                placeholder="Type your message..."
+              ></textarea>
               <button class="btn-theme-dark onl-booking-btn btn" type="submit">send</button>
             </form>
           </section>
