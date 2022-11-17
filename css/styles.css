@@ -623,7 +623,14 @@ img {
 
 /*----- Form----- */
 .booking-group {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.booking-group-field {
+  flex-basis: 270px;
+}
+.booking-field {
 }
 .booking-message {
   display: block;
