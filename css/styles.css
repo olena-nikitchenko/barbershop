@@ -11,6 +11,8 @@
   --header-idx: 10;
   --modal-idx: 100;
   --menu-idx: 1000;
+  --anim-fast: 300ms ease-out;
+  --anim-slow: 800ms ease;
 }
 body {
   font-family: 'Open Sans', sans-serif;
@@ -631,6 +633,17 @@ img {
   flex-basis: 270px;
 }
 .booking-field {
+  width: 100%;
+  height: 24px;
+  color: #ffffff;
+  outline: unset;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  transition: border-color var(--anim-fast);
+}
+.booking-field:focus {
+  border-color: #ffffff;
 }
 .booking-message {
   display: block;
