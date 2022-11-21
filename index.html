@@ -425,7 +425,7 @@
                     required
                     minlength="2"
                   />
-                  <span class="booking-label">NAME*</span>
+                  <span class="booking-label">NAME</span>
                 </label>
                 <label class="booking-group-field">
                   <input
@@ -435,16 +435,18 @@
                     placeholder="+38 (099) 123-45-67"
                     required
                   />
-                  <span class="booking-label">PHONE*</span>
+                  <span class="booking-label">PHONE</span>
                 </label>
               </div>
-              <label class="booking-label">Message</label>
-              <textarea
-                class="booking-message"
-                name="user_message"
-                rows="5"
-                placeholder="Type your message..."
-              ></textarea>
+              <label class="booking-group">
+                <textarea
+                  class="booking-message"
+                  name="user_message"
+                  rows="5"
+                  placeholder="Type your message..."
+                ></textarea>
+                <span class="booking-label">Message</span>
+              </label>
               <button class="btn-theme-dark onl-booking-btn btn" type="submit">send</button>
             </form>
           </section>
